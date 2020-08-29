@@ -1,0 +1,26 @@
+.main
+{
+    text-align: justify;
+    font-style: italic;
+}
+body
+{
+    font-style: italic;
+}
+
+#carouselExampleControls
+{
+    width: 40%;
+    height: 40%;
+}
+#title
+{
+    font-size: 120px;
+    text-align: center;
+}
+
+#Subtititle
+{
+    font-size: 30px;
+    text-align: center;
+}
