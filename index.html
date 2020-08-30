@@ -3,92 +3,551 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Versionadores</title>
+    <title>TECNO-WHITE</title>
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1150/PNG/512/1486504826-computer-display-cpu-device-monitor-screen_81346.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
-    <header>
+<body class="fondo">
+    <header class="fondo">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Smartphones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pc-tab" data-toggle="tab" href="#pc" role="tab" aria-controls="pc" aria-selected="false">Computers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pcc-tab" data-toggle="tab" href="#pcc" role="tab" aria-controls="pcc" aria-selected="false">PC components</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-            </li>
+            </li>         
           </ul>
     </header>
-   <br>
+ <br>
       <div class="tab-content container" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
          
           <div class="main row  container">
             
-            <article class="col-xs-12 col-sm-10">
+            <article class="col-md-12 col-lg-8 ">
               <h1 id="title">Tecno-White</h1>
-              <p id="Subtititle">Aparatos Electronicós</p>
-            </article>
-             <aside class="col-xs-12 col-sm-2">
-                <img src="data:image/png;base64,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" alt="Nikola Tesla">
-             </aside>
-             <div class="col-sm-6">
+              <p id="Subtititle">Aparatos Electrónicos.</p>
+
+              
+            </article>  
+            <aside class="col-lg-4 d-none d-lg-block ">
+              <img class="img-responsive" src="https://www.factoriacreativabarcelona.es/wp-content/uploads/2018/09/web-responsive.png" alt="img dispositivos" width="400" height="300" >
+            </aside>
+
+             </div>
+             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active col-md-12 ">
+                  <p id="text">BUENA CALIDAD</p>
+                </div>
+                <div class="carousel-item col-md-12 ">
+                  <p id="text">BAJOS COSTOS</p>
+                </div>
+                <div class="carousel-item col-md-12">
+                  <p id="text">COMPRA AHORA</p>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://images.philips.com/is/image/PhilipsConsumer/SHM3100U_10-IMS-es_CL?$jpglarge$&wid=1250" alt="First slide" width="200" height="300">
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+               
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+             
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+           
+              <div class="d-flex flex-nowrap">
+                <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://img.global.news.samsung.com/co/wp-content/uploads/2019/01/M20-Composite-Shot-White-Background-1-490x408.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="https://lh3.googleusercontent.com/proxy/021DpGWGeE4vwnwMe-jGDAeBbJecjP-YCen_iDlXr3lbhw7frlqF32fAS-gQdvRLZw4MhJ4byxZO8nDiRVFiZl4PuRX3K3x5yR5rss18H5mI2eumhrw" alt="Second slide" width="200" height="300">
+                </div></div>
+                <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://img.global.news.samsung.com/co/wp-content/uploads/2019/01/M20-Composite-Shot-White-Background-1-490x408.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="https://lh3.googleusercontent.com/proxy/_FlLxbMtM74Vpro11DBKhXrdLp6ek0gmXERtZMhKxkh0euknN7Zyl8KhiSJtBnCLAkrmRCshN2380zUtu1TPG_vJBnCbbjGtUPaSdqZRUpNSWsu4zRhgNM1v89FI7vCH" alt="Third slide" width="200" height="300">
+                </div></div>
+                <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://img.global.news.samsung.com/co/wp-content/uploads/2019/01/M20-Composite-Shot-White-Background-1-490x408.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                
+              </div>
+              <div class="d-flex flex-nowrap">
+                <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://www.digicelgroup.com/content/dam/digicel/Zendesk/Zendesk%20Images/El%20Salvador/handsets/samsung-s10.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://www.digicelgroup.com/content/dam/digicel/Zendesk/Zendesk%20Images/El%20Salvador/handsets/samsung-s10.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://www.digicelgroup.com/content/dam/digicel/Zendesk/Zendesk%20Images/El%20Salvador/handsets/samsung-s10.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                
+              </div>
+              <div class="d-flex flex-nowrap">
+                <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://i.pinimg.com/originals/b2/6d/5f/b26d5f8d9da4434811aa79672d972e7e.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://i.pinimg.com/originals/b2/6d/5f/b26d5f8d9da4434811aa79672d972e7e.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://i.pinimg.com/originals/b2/6d/5f/b26d5f8d9da4434811aa79672d972e7e.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                
+              </div>
+              <div class="d-flex flex-nowrap">
+                <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://img.global.news.samsung.com/co/wp-content/uploads/2019/01/M20-Composite-Shot-White-Background-1-490x408.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://img.global.news.samsung.com/co/wp-content/uploads/2019/01/M20-Composite-Shot-White-Background-1-490x408.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://img.global.news.samsung.com/co/wp-content/uploads/2019/01/M20-Composite-Shot-White-Background-1-490x408.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">BUY</a>
+                  </div>
+                </div></div>
+                
+              </div>
+                 </div>
+                 <div class="tab-pane fade" id="pc" role="tabpanel" aria-labelledby="pc-tab">
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.gaming-city.com.ar/web/wp-content/uploads/2020/07/970291-MLA42558755379_072020-O.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.gaming-city.com.ar/web/wp-content/uploads/2020/07/970291-MLA42558755379_072020-O.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.gaming-city.com.ar/web/wp-content/uploads/2020/07/970291-MLA42558755379_072020-O.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.gizcomputer.com/wp-content/uploads/2017/07/PC-gaming-barato.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.gizcomputer.com/wp-content/uploads/2017/07/PC-gaming-barato.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.gizcomputer.com/wp-content/uploads/2017/07/PC-gaming-barato.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.mypowerpc.com/web/image/434106/Combo-Gaming-ENTHUSIASTIC.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.mypowerpc.com/web/image/434106/Combo-Gaming-ENTHUSIASTIC.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.mypowerpc.com/web/image/434106/Combo-Gaming-ENTHUSIASTIC.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-              
-             </div>
-             <div class="col-sm-6">
-               
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://images.philips.com/is/image/PhilipsConsumer/SHM3100U_10-IMS-es_CL?$jpglarge$&wid=1250" alt="First slide" width="200" height="300">
+                <div class="tab-pane fade" id="pcc" role="tabpanel" aria-labelledby="pcc-tab">
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.startechcomputacion.com/wp-content/uploads/2020/05/xtech-teclado-gamer-iluminado-xtk-510s-armiger-D_NQ_NP_610797-MLA32173208669_092019-F.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.startechcomputacion.com/wp-content/uploads/2020/05/xtech-teclado-gamer-iluminado-xtk-510s-armiger-D_NQ_NP_610797-MLA32173208669_092019-F.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.startechcomputacion.com/wp-content/uploads/2020/05/xtech-teclado-gamer-iluminado-xtk-510s-armiger-D_NQ_NP_610797-MLA32173208669_092019-F.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="https://lh3.googleusercontent.com/proxy/021DpGWGeE4vwnwMe-jGDAeBbJecjP-YCen_iDlXr3lbhw7frlqF32fAS-gQdvRLZw4MhJ4byxZO8nDiRVFiZl4PuRX3K3x5yR5rss18H5mI2eumhrw" alt="Second slide" width="200" height="300">
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://centralshop.com.uy/wp-content/uploads/2020/05/mouse-gamer-rgb.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://centralshop.com.uy/wp-content/uploads/2020/05/mouse-gamer-rgb.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://centralshop.com.uy/wp-content/uploads/2020/05/mouse-gamer-rgb.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="https://lh3.googleusercontent.com/proxy/_FlLxbMtM74Vpro11DBKhXrdLp6ek0gmXERtZMhKxkh0euknN7Zyl8KhiSJtBnCLAkrmRCshN2380zUtu1TPG_vJBnCbbjGtUPaSdqZRUpNSWsu4zRhgNM1v89FI7vCH" alt="Third slide" width="200" height="300">
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://elchapuzasinformatico.com/wp-content/uploads/2020/06/Asus-ROG-Strix-XG17AHP.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://elchapuzasinformatico.com/wp-content/uploads/2020/06/Asus-ROG-Strix-XG17AHP.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://elchapuzasinformatico.com/wp-content/uploads/2020/06/Asus-ROG-Strix-XG17AHP.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
                   </div>
+                   
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://i.pinimg.com/originals/08/05/4a/08054a548c4d480a0e62113556a22b52.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://i.pinimg.com/originals/08/05/4a/08054a548c4d480a0e62113556a22b52.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://i.pinimg.com/originals/08/05/4a/08054a548c4d480a0e62113556a22b52.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                    
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.enlacehw.com/wp-content/uploads/2018/10/Gaming-Z390-AORUS.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.enlacehw.com/wp-content/uploads/2018/10/Gaming-Z390-AORUS.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.enlacehw.com/wp-content/uploads/2018/10/Gaming-Z390-AORUS.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                     
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://resources.claroshop.com/medios-plazavip/s2/10252/1198467/5d7aca2feebaf-auriculares-gamer-ziumier-luz-rgb-con-microfono-verde-1600x1600.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://resources.claroshop.com/medios-plazavip/s2/10252/1198467/5d7aca2feebaf-auriculares-gamer-ziumier-luz-rgb-con-microfono-verde-1600x1600.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://resources.claroshop.com/medios-plazavip/s2/10252/1198467/5d7aca2feebaf-auriculares-gamer-ziumier-luz-rgb-con-microfono-verde-1600x1600.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.spdigital.cl/img/products/hx-features-mic-quadcast.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.spdigital.cl/img/products/hx-features-mic-quadcast.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://www.spdigital.cl/img/products/hx-features-mic-quadcast.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                  <div class="d-flex flex-nowrap">
+                    <div class="order-3 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://http2.mlstatic.com/cpu-gamer-amd-a6-7480-8gb-hd-1tb-D_NQ_NP_639178-MLA40257450321_122019-F.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-2 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://http2.mlstatic.com/cpu-gamer-amd-a6-7480-8gb-hd-1tb-D_NQ_NP_639178-MLA40257450321_122019-F.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    <div class="order-1 p-2"><div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="https://http2.mlstatic.com/cpu-gamer-amd-a6-7480-8gb-hd-1tb-D_NQ_NP_639178-MLA40257450321_122019-F.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">BUY</a>
+                      </div>
+                    </div></div>
+                    
+                  </div>
+                 
+                  
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-              
-             </div>
-            </div>
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-         </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <h1>
+                    Contacta con nosotros.
+                  </h1>
+                 
+                  
+
+                    <div class="card-group">
+                      <div class="card">
+                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">GMAIL</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/fb_icon-icons.com_62768.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">FACEBOOK</h5>
+                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/whatsapp_icon-icons.com_62800.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">WHATSAPP</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  
+                  
+                </div>
+                </div>
+             
+                
+           
+            
+           
+       
+       
+        <footer >
+        <hr>
+          <div class="container">
+            <small>Copyright 2020.
+              <h6> developed by: Jony López & Abigail Saravia
+                </h6>
+                </small>
+          </div>
+         
+        </footer>
+         
         
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

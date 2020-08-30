@@ -6,21 +6,30 @@
 body
 {
     font-style: italic;
+ 
 }
 
-#carouselExampleControls
-{
-    width: 40%;
-    height: 40%;
-}
+
 #title
 {
-    font-size: 120px;
-    text-align: center;
+    font-size: 95px;
+    color: rgb(17, 11, 71);
 }
+#text
+{
+    font-size: 80px;
+    color: rgb(151, 25, 31);
+}
+
 
 #Subtititle
 {
-    font-size: 30px;
-    text-align: center;
+    font-size: 32px;
+    text-align: left;
+    
 }
+.fondo
+{
+    background-color: whitesmoke;
+}
+
