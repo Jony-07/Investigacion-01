@@ -497,18 +497,18 @@
 
                     <div class="card-group">
                       <div class="card">
-                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png" class="card-img-top" alt="...">
+                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png" class="card-img-top d-none d-sm-block" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">GMAIL</h5>
                         
                         </div>
                         <div class="card-footer">
-                          <small class="text-muted">AlumnoOne@gmail.com - AlumnoTwo@gmail.com </small>
+                          <small class="text-muted">Alumno@gmail.com</small>
                           
                         </div>
                       </div>
                       <div class="card">
-                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/fb_icon-icons.com_62768.png" class="card-img-top" alt="..." >
+                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/fb_icon-icons.com_62768.png" class="card-img-top d-none d-sm-block" alt="..." >
                         <div class="card-body">
                           <h5 class="card-title">FACEBOOK</h5>
                         
@@ -518,13 +518,13 @@
                         </div>
                       </div>
                       <div class="card">
-                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/whatsapp_icon-icons.com_62800.png" class="card-img-top" alt="...">
+                        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/whatsapp_icon-icons.com_62800.png" class="card-img-top d-none d-sm-block" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">WHATSAPP</h5>
                       
                         </div>
                         <div class="card-footer">
-                          <small class="text-muted">7900-9060 - 76747545 - 911</small>
+                          <small class="text-muted">7900-9060 - 76747545</small>
                         </div>
                       </div>
                     </div>
@@ -534,9 +534,73 @@
                   
                 </div>
                 <div class="tab-pane fade" id="canvas" role="tabpanel" aria-labelledby="canvas-tab">
-
+                  
+                  <div class="container">
+                    <div class="container d-block d-lg-none ">
+                      
+                      <header>
+                        <h1>En mantenimiento.</h1>
+                      </header>
+                    </div>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide d-none d-xl-block" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <style type="text/css">
+                            body { background:rgb(90, 83, 158); margin: 0;}
+                            canvas { background:rgba(91, 83, 158, 0.205);  }
+                          </style>
+                          <canvas width="1280" height="720" id="lienzo"></canvas>
+                          <script>
+                            var radius = 250;
+                            var cx = window.innerWidth / 2;
+                            var cy = window.innerHeight / 2;
+                            var circleColor = 'skyblue';
+                            var circleSelectedColor = 'purple';
+                        
+                            var cv;
+                            var ctx;
+                        
+                            function drawCircle(color) {
+                              ctx.beginPath();
+                              ctx.arc(cx, cy, radius, 0, Math.PI * 2, 0);
+                              ctx.fillStyle = color;
+                              ctx.fill();
+                            }
+                        
+                            window.onload = function() {
+                              cv = document.getElementById('lienzo');
+                              ctx = cv.getContext('2d');
+                        
+                              cv.onmousemove = function(event) {
+                                var x = event.clientX;
+                                var y = event.clientY;
+                        
+                                var dx = Math.abs(x - cx);
+                                var dy = Math.abs(y - cy);
+                        
+                                var distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+                        
+                                if (distance <= radius) {
+                                  drawCircle(circleSelectedColor);
+                                } else {
+                                  drawCircle(circleColor);
+                                }
+                              }
+                        
+                              drawCircle(circleColor);
+                            }
+                          </script>
+                        </div>
+                       
+                      </div>
+                    </div>
+                   
+  
+                  </div>
+                  
+                  
                 </div>
-                </div>
+      </div>
              
                 
            
